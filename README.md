@@ -7,9 +7,9 @@ This will start as a simple deployment for Terraform and will start growing
     - Key pair should be **generated** on your machine and the **public key** should be sent to AWS.
 - **Functionalities**
     - Able to SSH on the EC2 instance
-    - Able to access nginx service from everywhere
+    - Able to access nginx service from everywhere (nginx deployed with **Bash** script)
 - **Outputs**
-    - The output should include the **EC2** instance's **public IP address** & **DNS name**.
+    - The output should include the **EC2** instance's **DNS name**.
     - The output should provide you with a command to SSH to the instance. Example: `ssh -i [SSH_KEY_FILE] ec2-user@[DNS_NAME]`.
  - **Verify**
     - Make sure you can remote into the machine with a Key Pair.

@@ -1,7 +1,7 @@
 # tf-deploy
 This will start as a simple deployment for Terraform and will start growing
 
-## Goals
+## Projects
 ### 1 - Deploy an EC2 Instance in the default VPC with nginx
 - **Prerequisites**
     - Key pair should be **generated** on your machine and the **public key** should be sent to AWS.
@@ -14,3 +14,7 @@ This will start as a simple deployment for Terraform and will start growing
  - **Verify**
     - Make sure you can remote into the machine with a Key Pair.
     - Make sure you can access the nginx service on Port **80**.
+
+
+### 2 - Nginx instance in a module
+The goal here is to take the instance we created earlier and all of its ressources and turn it into a module.

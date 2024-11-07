@@ -18,4 +18,19 @@ This will start as a simple deployment for Terraform and will start growing
 
 ### 2 - Nginx instance in a module
 - The goal here is to take the instance we created earlier and all of its ressources and turn it into a module.
-- Be careful about the outputs. You will learn about **Module Composition**.
+- Be careful about the outputs. You will learn about [Module Composition](https://developer.hashicorp.com/terraform/language/modules/develop/composition).
+
+
+### 3 - Seperate environment
+- Create a prod and a dev environment
+- They should both use the module which will be in a different folder
+- They should both be in difference [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)
+
+### 4 - Store the states on S3 & lock-file?
+- TBD
+
+### 5 - Create a module in a different Git Repository
+- Create the `nginx_cluster` in a different Git Repository and access it
+
+### 6 - Create a versioned module
+- Same as 5 but reference a version

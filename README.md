@@ -17,4 +17,5 @@ This will start as a simple deployment for Terraform and will start growing
 
 
 ### 2 - Nginx instance in a module
-The goal here is to take the instance we created earlier and all of its ressources and turn it into a module.
+- The goal here is to take the instance we created earlier and all of its ressources and turn it into a module.
+- Be careful about the outputs. You will learn about **Module Composition**.

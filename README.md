@@ -21,16 +21,18 @@ This will start as a simple deployment for Terraform and will start growing
 - Be careful about the outputs. You will learn about [Module Composition](https://developer.hashicorp.com/terraform/language/modules/develop/composition).
 
 
-### 3 - Seperate environment
-- Create a prod and a dev environment
+### 3 - Seperate environment folders
+- Create a **prod** and a **dev** environment
 - They should both use the module which will be in a different folder
-- They should both be in difference [workspaces](https://developer.hashicorp.com/terraform/language/state/workspaces)
 
-### 4 - Store the states on S3 & lock-file?
-- TBD
+### 4 - Create an examples folder
+- The goal of the `examples` folder is to have an example of how to use each modules.
+- Why? this way you can easily test each modules to make sure they work.
 
 ### 5 - Create a module in a different Git Repository
 - Create the `nginx_cluster` in a different Git Repository and access it
 
 ### 6 - Create a versioned module
 - Same as 5 but reference a version
+
+### 7 - Store the states on S3 & lock-file?

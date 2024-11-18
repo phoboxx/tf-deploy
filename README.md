@@ -20,7 +20,6 @@ This will start as a simple deployment for Terraform and will start growing
 - The goal here is to take the instance we created earlier and all of its ressources and turn it into a module.
 - Be careful about the outputs. You will learn about [Module Composition](https://developer.hashicorp.com/terraform/language/modules/develop/composition).
 
-
 ### 3 - Seperate environment folders
 - Create a **prod** and a **dev** environment
 - They should both use the module which will be in a different folder
@@ -28,11 +27,72 @@ This will start as a simple deployment for Terraform and will start growing
 ### 4 - Create an examples folder
 - The goal of the `examples` folder is to have an example of how to use each modules.
 - Why? this way you can easily test each modules to make sure they work.
+- Based from [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
+
+***tree***
+```
+├── examples
+│   └── nginx_cluster
+│       ├── README.md
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── live
+│   ├── dev
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   ├── terraform.tfvars
+│   │   └── variables.tf
+│   └── prod
+│       ├── main.tf
+│       ├── outputs.tf
+│       ├── terraform.tfvars
+│       └── variables.tf
+└── modules
+    └── nginx_cluster
+        ├── main.tf
+        ├── outputs.tf
+        ├── providers.tf
+        ├── scripts
+        │   └── install_nginx.sh
+        └── variables.tf
+```
 
 ### 5 - Create a module in a different Git Repository
 - Create the `nginx_cluster` in a different Git Repository and access it
+- Make sure `nginx_cluster` has its own `examples` folder based on [Standard Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
 ### 6 - Create a versioned module
 - Same as 5 but reference a version
 
-### 7 - Store the states on S3 & lock-file?
+### 7 Create tests using Terraform tests 
+- https://developer.hashicorp.com/terraform/tutorials/configuration-language/test
+
+### 8 - Store the states on S3 & lock-file?
+
+## References
+These are intersting references
+
+### Complete module structure
+```
+.
+├── README.md
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── ...
+├── modules/
+│   ├── nestedA/
+│   │   ├── README.md
+│   │   ├── variables.tf
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   ├── nestedB/
+│   ├── .../
+├── examples/
+│   ├── exampleA/
+│   │   ├── main.tf
+│   ├── exampleB/
+│   ├── .../
+
+```

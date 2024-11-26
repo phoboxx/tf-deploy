@@ -68,7 +68,9 @@ This will start as a simple deployment for Terraform and will start growing
 ### 7 Create tests using Terraform tests 
 - https://developer.hashicorp.com/terraform/tutorials/configuration-language/test
 
-### 8 - Store the states on S3 & lock-file?
+### 8 - Having a monorepo for modules
+
+### 9 - Store the states on S3 & lock-file?
 
 ## References
 These are intersting references
